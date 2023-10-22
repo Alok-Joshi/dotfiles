@@ -162,4 +162,5 @@ set -o vi
 export PATH="$PATH:/home/alok/flutter/bin"
 export DENO_INSTALL="/home/alok/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+export PATH="$PATH:/usr/local/go/bin"
 

@@ -6,74 +6,41 @@
 :set smarttab
 :set softtabstop=4
 :set mouse=a
-set clipboard=unnamedplus
+set clipboard=unnamedplus "to copy paste from vim to other system clipboard
 :set cursorline
 :set cursorcolumn
 :set splitright
 :set splitbelow
-call plug#begin()
-
-Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
-Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
-Plug 'https://github.com/vim-airline/vim-airline' " Status bar
-Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
-Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
-Plug 'https://github.com/neoclide/coc.nvim'  " Auto Completion
-Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
-Plug 'junegunn/fzf',{'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
-"Dart/Flutter
-Plug 'dart-lang/dart-vim-plugin'
-Plug 'thosakwe/vim-flutter'
-Plug 'natebosch/vim-lsc'
-Plug 'natebosch/vim-lsc-dart'
+:set smartindent
 set encoding=UTF-8
 
 
+#for the colors of highlighting and text
+set termguicolors
+#this sets the color scheme
+colorscheme nova
+
+call plug#begin()
+
+Plug 'junegunn/fzf',{'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'dense-analysis/ale'
+
+
 call plug#end()
-" nnoremap <A-f> :NERDTreeFocus<CR>
-nnoremap <A-n> :NERDTree<CR>
-nnoremap <A-f> :NERDTreeToggle<CR>
-nnoremap <A-t> :TerminalSplit bash <CR>
-nnoremap <A-q> :q <CR>
-nnoremap <A-w> :w <CR>
+
+" For opening Fuzzy finder 
 nnoremap <C-p> :Files <CR>
+
+" For selecting a block and moving it using tabs
 vnoremap < <gv
 vnoremap > >gv
+
+"For switching between different panes
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
-nmap <silent> gd :call CocAction('jumpDefinition', 'tabe')<CR>
 
-:set completeopt-=preview " For No Previews
+let g:ale_fix_on_save = 1
 
-set termguicolors
-set background=dark
-colorscheme nova
-" --- Just Some Notes ---
-" :PlugClean :PlugInstall :UpdateRemotePlugins
-"
-" :CocInstall coc-python
-" :CocInstall coc-clangd
-" :CocInstall coc-snippets
-" :CocCommand snippets.edit... FOR EACH FILE TYPE
-
-" air-line
-let g:airline_powerline_fonts = 1
-
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-
-"airline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
-
-inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
