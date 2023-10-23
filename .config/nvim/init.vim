@@ -14,10 +14,9 @@ set clipboard=unnamedplus "to copy paste from vim to other system clipboard
 :set smartindent
 set encoding=UTF-8
 
-
 #for the colors of highlighting and text
-set termguicolors
 #this sets the color scheme
+set termguicolors
 colorscheme nova
 
 call plug#begin()
@@ -42,5 +41,7 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-let g:ale_fix_on_save = 1
-
+"Import locations
+" /usr/share/nvim/   (colors is in runtime)
+" /.config/nvim/
+" .local/share/nvim/
