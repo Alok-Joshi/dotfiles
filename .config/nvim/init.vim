@@ -29,23 +29,22 @@ call plug#end()
 
 " For opening Fuzzy finder
 nnoremap <C-p> :Files <CR>
+" For ALE Hover
+nnoremap <C-h> :ALEHover<CR>
+
 
 " For selecting a block and moving it using tabs
 vnoremap < <gv
 vnoremap > >gv
 
-"For switching between different panes
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
-
-
 let g:ale_python_auto_virtualenv = 1
 let g:ale_python_flake8_auto_pipenv = 1
-let g:ale_linters = {'cpp': ['clangd'],'javascriptreact': ['eslint'], 'yaml': ['yamllint'], 'python': ['pylint']}
+let g:ale_linters = {'cpp': ['clangd'],'javascriptreact': ['eslint'], 'yaml': ['yamllint'], 'python': ['jedils','pylint']}
 let g:ale_fixers = {'cpp': ['astyle'],'javascriptreact': ['prettier'],'yaml': ['yamlfix'], '*': [ 'remove_trailing_lines', 'remove_trailing_lines','trim_whitespace'], 'python': ['black']}
 let g:ale_fix_on_save = 1
+let g:ale_completion_enabled = 1
+let g:ale_floating_preview = 1
+
 "Import locations
 " /usr/share/nvim/   (colors is in runtime)
 " /.config/nvim/
