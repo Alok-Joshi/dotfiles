@@ -43,9 +43,8 @@ map <C-l> <C-W>l
 
 let g:ale_python_auto_virtualenv = 1
 let g:ale_python_flake8_auto_pipenv = 1
-let g:ale_linters = {'javascriptreact': ['eslint'], 'yaml': ['yamllint'], 'python': ['pylint']}
-let g:ale_fixers = {'javascriptreact': ['prettier'],'yaml': ['yamlfix'], '*': [ 'remove_trailing_lines', 'remove_trailing_lines','trim_whitespace'], 'python': ['black']}
-let g:ale_completion_enabled = 1
+let g:ale_linters = {'cpp': ['clangd'],'javascriptreact': ['eslint'], 'yaml': ['yamllint'], 'python': ['pylint']}
+let g:ale_fixers = {'cpp': ['astyle'],'javascriptreact': ['prettier'],'yaml': ['yamlfix'], '*': [ 'remove_trailing_lines', 'remove_trailing_lines','trim_whitespace'], 'python': ['black']}
 let g:ale_fix_on_save = 1
 "Import locations
 " /usr/share/nvim/   (colors is in runtime)
