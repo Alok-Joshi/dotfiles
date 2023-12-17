@@ -31,6 +31,7 @@ call plug#end()
 nnoremap <C-p> :Files <CR>
 " For ALE Hover
 nnoremap <C-h> :ALEHover<CR>
+nnoremap gd :ALEGoToDefinition<CR>
 
 
 " For selecting a block and moving it using tabs
