@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
-let g:netrw_dirhist_6='/home/alok/Documents/Notes'
-let g:netrw_dirhist_5='/home/alok/Documents/webrtc/KurentoClient/recipes'
-let g:netrw_dirhist_4='/home/alok/.config'
-let g:netrw_dirhist_3='/home/alok/synth-shell/synth-shell/synth-shell-prompt'
-let g:netrw_dirhist_2='/home/alok/Documents/webrtc/KurentoClient/recipes/rtsp-stream'
-let g:netrw_dirhist_1='/home/alok/Documents/webrtc/KurentoClient/recipes/rtsp-stream/rtsp'
